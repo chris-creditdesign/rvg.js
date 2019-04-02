@@ -23,8 +23,12 @@ class Text extends DraggableBase {
     const {
       x, y,
       fill,
-      fontSize, fontFamily, fontWeight,
-      textAnchor, smartQuotes
+      fontSize,
+	  fontFamily,
+	  fontWeight,
+      textAnchor,
+	  smartQuotes,
+	  transform,
     } = this.props;
     
     let text = this.props.children;
@@ -53,6 +57,7 @@ class Text extends DraggableBase {
             fontSize={fontSize}
             fontFamily={fontFamily}
             fontWeight={fontWeight}
+			transform={transform}
             {...this.draggableProps}>
         {text}
       </text>
