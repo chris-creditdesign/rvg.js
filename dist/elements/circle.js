@@ -30,13 +30,15 @@ var Circle = function (_DraggableBase) {
           x = _props.x,
           y = _props.y,
           fill = _props.fill,
-          radius = _props.radius;
+          radius = _props.radius,
+          opacity = _props.opacity;
 
 
       return React.createElement('circle', _extends({ cx: x,
         cy: y,
         fill: fill,
-        r: radius
+        r: radius,
+        opacity: opacity
       }, this.draggableProps));
     }
   }]);
@@ -58,7 +60,8 @@ Circle.defaultProps = {
   x: 100,
   y: 100,
   fill: '#000',
-  radius: 100
+  radius: 100,
+  opacity: 1
 };
 
 module.exports = Circle;

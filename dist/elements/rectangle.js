@@ -32,7 +32,8 @@ var Rectangle = function (_DraggableBase) {
           fill = _props.fill,
           gradient = _props.gradient,
           height = _props.height,
-          width = _props.width;
+          width = _props.width,
+          opacity = _props.opacity;
 
 
       if (gradient) {
@@ -43,7 +44,8 @@ var Rectangle = function (_DraggableBase) {
         y: y,
         fill: fill,
         height: height,
-        width: width
+        width: width,
+        opacity: opacity
       }, this.draggableProps));
     }
   }]);
@@ -67,7 +69,8 @@ Rectangle.defaultProps = {
   y: 0,
   fill: '#000',
   height: 100,
-  width: 100
+  width: 100,
+  opacity: 1
 };
 
 module.exports = Rectangle;

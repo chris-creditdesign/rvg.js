@@ -29,12 +29,14 @@ var Path = function (_DraggableBase) {
       var _props = this.props,
           d = _props.d,
           fill = _props.fill,
-          transform = _props.transform;
+          transform = _props.transform,
+          opacity = _props.opacity;
 
 
       return React.createElement('path', _extends({ d: d,
         fill: fill,
-        transform: transform
+        transform: transform,
+        opacity: opacity
       }, this.draggableProps));
     }
   }]);
@@ -49,6 +51,8 @@ Path.propTypes = {
   d: React.PropTypes.string.isRequired
 };
 
-Path.defaultProps = {};
+Path.defaultProps = {
+  opacity: 1
+};
 
 module.exports = Path;

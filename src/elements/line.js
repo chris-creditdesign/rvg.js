@@ -7,7 +7,8 @@ class Line extends DraggableBase {
   render() {
     const {
       x, y,
-      stroke
+      stroke,
+	  opacity,
     } = this.props;
     
     return (
@@ -16,6 +17,7 @@ class Line extends DraggableBase {
             y1={y[0]}
             y2={y[1]}
             stroke={stroke}
+			opacity={opacity}
             {...this.draggableProps} />
     );
   }
@@ -32,7 +34,8 @@ Line.propTypes = {
 Line.defaultProps = {
   x: [100, 200],
   y: [50, 100],
-  stroke: '#000'
+  stroke: '#000',
+  opacity: 1,
 }
 
 module.exports = Line;

@@ -8,7 +8,8 @@ class Rectangle extends DraggableBase {
     let {
       x, y,
       fill, gradient,
-      height, width
+      height, width,
+	  opacity,
     } = this.props;
 
     if(gradient) {
@@ -21,6 +22,7 @@ class Rectangle extends DraggableBase {
             fill={fill}
             height={height}
             width={width}
+			opacity={opacity}
             {...this.draggableProps} />
     );
   }
@@ -41,7 +43,8 @@ Rectangle.defaultProps = {
   y: 0,
   fill: '#000',
   height: 100,
-  width: 100
+  width: 100,
+  opacity: 1,
 }
 
 module.exports = Rectangle;

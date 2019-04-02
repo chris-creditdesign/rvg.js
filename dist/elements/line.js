@@ -29,14 +29,16 @@ var Line = function (_DraggableBase) {
       var _props = this.props,
           x = _props.x,
           y = _props.y,
-          stroke = _props.stroke;
+          stroke = _props.stroke,
+          opacity = _props.opacity;
 
 
       return React.createElement('line', _extends({ x1: x[0],
         x2: x[1],
         y1: y[0],
         y2: y[1],
-        stroke: stroke
+        stroke: stroke,
+        opacity: opacity
       }, this.draggableProps));
     }
   }]);
@@ -56,7 +58,8 @@ Line.propTypes = {
 Line.defaultProps = {
   x: [100, 200],
   y: [50, 100],
-  stroke: '#000'
+  stroke: '#000',
+  opacity: 1
 };
 
 module.exports = Line;

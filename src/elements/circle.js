@@ -8,7 +8,8 @@ class Circle extends DraggableBase {
     const {
       x, y,
       fill,
-      radius
+      radius,
+	  opacity,
     } = this.props;
     
     return (
@@ -16,6 +17,7 @@ class Circle extends DraggableBase {
               cy={y}
               fill={fill}
               r={radius}
+			  opacity={opacity}
               {...this.draggableProps} />
     );
   }
@@ -34,7 +36,8 @@ Circle.defaultProps = {
   x: 100,
   y: 100,
   fill: '#000',
-  radius: 100
+  radius: 100,
+  opacity: 1,
 }
 
 module.exports = Circle;

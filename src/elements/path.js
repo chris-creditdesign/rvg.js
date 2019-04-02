@@ -8,13 +8,15 @@ class Path extends DraggableBase {
     const {
       d,
       fill,
-      transform
+      transform,
+	  opacity,
     } = this.props;
     
     return (
       <path d={d}
             fill={fill}
             transform={transform}
+			opacity={opacity}
             {...this.draggableProps} />
     );
   }
@@ -27,7 +29,7 @@ Path.propTypes = {
 };
 
 Path.defaultProps = {
-  
+   opacity: 1,
 }
 
 module.exports = Path;

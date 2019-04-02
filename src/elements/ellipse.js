@@ -8,7 +8,8 @@ class Ellipse extends DraggableBase {
     const {
       x, y,
       fill,
-      radiusX, radiusY
+      radiusX, radiusY,
+	  opacity,
     } = this.props;
     
     return (
@@ -17,6 +18,7 @@ class Ellipse extends DraggableBase {
                fill={fill}
                rx={radiusX}
                ry={radiusY}
+			   opacity={opacity}
                {...this.draggableProps} />
     );
   }
@@ -37,7 +39,8 @@ Ellipse.defaultProps = {
   y: 50,
   fill: '#000',
   radiusX: 100,
-  radiusY: 50
+  radiusY: 50,
+  opacity: 1,
 }
 
 module.exports = Ellipse;

@@ -31,14 +31,16 @@ var Ellipse = function (_DraggableBase) {
           y = _props.y,
           fill = _props.fill,
           radiusX = _props.radiusX,
-          radiusY = _props.radiusY;
+          radiusY = _props.radiusY,
+          opacity = _props.opacity;
 
 
       return React.createElement('ellipse', _extends({ cx: x,
         cy: y,
         fill: fill,
         rx: radiusX,
-        ry: radiusY
+        ry: radiusY,
+        opacity: opacity
       }, this.draggableProps));
     }
   }]);
@@ -62,7 +64,8 @@ Ellipse.defaultProps = {
   y: 50,
   fill: '#000',
   radiusX: 100,
-  radiusY: 50
+  radiusY: 50,
+  opacity: 1
 };
 
 module.exports = Ellipse;

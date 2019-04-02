@@ -112,7 +112,8 @@ Text.defaultProps = {
   fill: '#000',
   fontSize: 20,
   fontFamily: 'serif',
-  textAnchor: 'start'
+  textAnchor: 'start',
+  transform: ''
 };
 
 module.exports = Text;

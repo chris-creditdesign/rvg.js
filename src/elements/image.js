@@ -9,7 +9,7 @@ class Image extends DraggableBase {
       x, y,
       height, width,
       href,
-      opacity
+      opacity,
     } = this.props;
 
     return (
