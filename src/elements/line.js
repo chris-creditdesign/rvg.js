@@ -9,6 +9,7 @@ class Line extends DraggableBase {
       x, y,
       stroke,
 	  opacity,
+	  strokeWidth,
     } = this.props;
     
     return (
@@ -18,6 +19,7 @@ class Line extends DraggableBase {
             y2={y[1]}
             stroke={stroke}
 			opacity={opacity}
+			strokeWidth={strokeWidth}
             {...this.draggableProps} />
     );
   }
@@ -28,7 +30,8 @@ class Line extends DraggableBase {
 Line.propTypes = {
   x: React.PropTypes.array.isRequired,
   y: React.PropTypes.array.isRequired,
-  stroke: React.PropTypes.string.isRequired
+  stroke: React.PropTypes.string.isRequired,
+  strokeWidth: React.PropTypes.string.isRequired,
 };
 
 Line.defaultProps = {
@@ -36,6 +39,7 @@ Line.defaultProps = {
   y: [50, 100],
   stroke: '#000',
   opacity: 1,
+  strokeWidth: "1px",
 }
 
 module.exports = Line;
